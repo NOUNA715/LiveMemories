@@ -3,79 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LiveMemories – Wireframe</title>
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#007bff" />
-  <link rel="icon" href="icon-192.png" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <title>LiveMemories</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="icon" href="icon-192.png" type="image/png" />
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 20px;
-      background: #f4f6f8;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
       text-align: center;
     }
-    h1 {
-      color: #007bff;
-      margin-top: 40px;
+
+    header {
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
+
+    .container {
+      padding: 30px;
+    }
+
     button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
+      display: inline-flex;
+      align-items: center;
+      margin: 15px;
+      padding: 12px 25px;
+      font-size: 1rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 12px;
+      background: #00adb5;
+      color: #fff;
       cursor: pointer;
+      transition: background 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
+
     button:hover {
-      background-color: #0056b3;
+      background: #007a80;
     }
+
+    button span {
+      margin-left: 10px;
+    }
+
     video {
-      margin-top: 20px;
-      max-width: 100%;
-      border: 2px solid #007bff;
-      border-radius: 10px;
-    }
-    #uploadStatus {
-      margin-top: 15px;
-      font-size: 0.95rem;
-      color: green;
-    }
-    #aiMemory {
       margin-top: 30px;
-      padding: 15px;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      max-width: 600px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
     }
-    #installPrompt {
-      margin-top: 30px;
-      color: #007bff;
-      font-size: 0.95rem;
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9em;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
-  <h1 id="title">Welcome to LiveMemories</h1>
-  <p id="description">This is your cross-platform memory journaling app. Install it and enjoy!</p>
-  <button onclick="startRecording()">🎥 <span id="recordBtn">Start Recording Memory</span></button>
-  <button onclick="uploadToDrive()">☁️ <span id="uploadBtn">Upload to Cloud</span></button>
-  <button onclick="window.location.href='about.html'">ℹ️ About</button>
-  <button onclick="sendReminder()">🔔 Set Daily Reminder</button>
-  <video id="recordedVideo" controls autoplay muted></video>
-  <div id="uploadStatus"></div>
-  <div id="aiMemory">
-    <h3>📅 <span id="aiTitle">AI Memory of the Day</span></h3>
-    <p id="aiContent">Generating...</p>
+  <header>📘 LiveMemories</header>
+
+  <div class="container">
+    <button onclick="startRecording()">🎥 <span id="recordBtn">Start Recording Memory</span></button>
+    <button onclick="uploadToDrive()">☁️ <span id="uploadBtn">Upload to Cloud</span></button>
+    <button onclick="window.location.href='about.html'">ℹ️ <span>About</span></button>
+    <button onclick="sendReminder()">🔔 <span>Set Daily Reminder</span></button>
+
+    <video id="recordedVideo" controls autoplay muted></video>
   </div>
-  <div id="installPrompt"></div>
+
+  <footer>© 2025 LiveMemories. All rights reserved.</footer>
+
   <script src="main.js"></script>
 </body>
 </html>
