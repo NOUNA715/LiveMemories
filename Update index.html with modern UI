@@ -3,102 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#4A90E2" />
   <title>LiveMemories</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="icon-192.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
-
     body {
       margin: 0;
-      background-color: #f4f7fa;
-      color: #333;
-      padding-top: 70px;
-    }
-
-    header {
-      background-color: #4A90E2;
-      color: white;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: 700;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      padding: 40px 20px;
     }
 
-    main {
-      padding: 20px;
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5em;
       text-align: center;
     }
 
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
     button {
-      margin: 10px;
-      padding: 12px 20px;
-      font-size: 16px;
+      padding: 15px 25px;
+      font-size: 1em;
       border: none;
-      border-radius: 8px;
-      background-color: #4A90E2;
-      color: white;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     button:hover {
-      background-color: #357ABD;
+      transform: scale(1.05);
+    }
+
+    .record-btn {
+      background: #1e90ff;
+      color: white;
+    }
+
+    .upload-btn {
+      background: #28a745;
+      color: white;
+    }
+
+    .about-btn {
+      background: #17a2b8;
+      color: white;
+    }
+
+    .reminder-btn {
+      background: #ffc107;
+      color: black;
     }
 
     video {
-      width: 90%;
+      width: 100%;
       max-width: 600px;
-      margin-top: 20px;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #888;
+      border-radius: 15px;
+      margin-top: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
   </style>
 </head>
 <body>
-  <header>📘 LiveMemories</header>
-
-  <main>
-    <h2>Welcome to your Digital Memory Journal</h2>
-
-    <button onclick="startRecording()">🎥 Start Recording</button>
-    <button onclick="uploadToDrive()">☁️ Upload to Cloud</button>
-    <button onclick="window.location.href='about.html'">ℹ️ About</button>
-    <button onclick="sendReminder()">🔔 Set Daily Reminder</button>
-
-    <video id="recordedVideo" controls autoplay muted></video>
-
-    <footer>© 2025 LiveMemories. All rights reserved.</footer>
-  </main>
+  <h1>🎥 LiveMemories</h1>
+  <div class="button-container">
+    <button class="record-btn" onclick="startRecording()"><i class="fas fa-circle"></i> Start Recording</button>
+    <button class="upload-btn" onclick="uploadToDrive()"><i class="fas fa-cloud-upload-alt"></i> Upload to Cloud</button>
+    <button class="about-btn" onclick="window.location.href='about.html'"><i class="fas fa-info-circle"></i> About</button>
+    <button class="reminder-btn" onclick="sendReminder()"><i class="fas fa-bell"></i> Daily Reminder</button>
+  </div>
+  <video id="recordedVideo" controls autoplay muted></video>
 
   <script>
     function startRecording() {
-      alert('Recording started! (simulation)');
+      alert('Recording started...');
     }
 
     function uploadToDrive() {
-      alert('Upload to Google Drive (simulation)');
+      alert('Uploading to Drive...');
     }
 
     function sendReminder() {
-      alert('Daily reminder set! (simulation)');
+      alert('Daily reminder set!');
     }
   </script>
 </body>
