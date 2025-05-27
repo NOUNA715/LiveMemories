@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4A90E2" />
+  <title>LiveMemories</title>
+  <link rel="icon" href="icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f4f7fa;
+      color: #333;
+      padding-top: 70px;
+    }
+
+    header {
+      background-color: #4A90E2;
+      color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    button {
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4A90E2;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+    }
+
+    video {
+      width: 90%;
+      max-width: 600px;
+      margin-top: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>📘 LiveMemories</header>
+
+  <main>
+    <h2>Welcome to your Digital Memory Journal</h2>
+
+    <button onclick="startRecording()">🎥 Start Recording</button>
+    <button onclick="uploadToDrive()">☁️ Upload to Cloud</button>
+    <button onclick="window.location.href='about.html'">ℹ️ About</button>
+    <button onclick="sendReminder()">🔔 Set Daily Reminder</button>
+
+    <video id="recordedVideo" controls autoplay muted></video>
+
+    <footer>© 2025 LiveMemories. All rights reserved.</footer>
+  </main>
+
+  <script>
+    function startRecording() {
+      alert('Recording started! (simulation)');
+    }
+
+    function uploadToDrive() {
+      alert('Upload to Google Drive (simulation)');
+    }
+
+    function sendReminder() {
+      alert('Daily reminder set! (simulation)');
+    }
+  </script>
+</body>
+</html>
